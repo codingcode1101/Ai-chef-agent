@@ -1,0 +1,33 @@
+[project]
+name = "ai-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "codingcode1101", email = "130331525+codingcode1101@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "alibabacloud-oss-v2>=1.4.0",
+    "fastapi>=0.141.1",
+    "ipykernel>=7.3.0",
+    "ipywidgets>=8.1.9",
+    "langchain>=1.4.1",
+    "langchain-deepseek>=1.1.0",
+    "langchain-tavily>=0.2.18",
+    "langgraph-checkpoint-sqlite>=3.1.1",
+    "langgraph-cli[inmem]>=0.4.31",
+    "openai>=3.13.0",
+    "python-dotenv>=1.2.3",
+]
+
+[project.scripts]
+ai-agent = "ai_agent:main"
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
